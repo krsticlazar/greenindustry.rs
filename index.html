@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Početna</title>
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <!-- #region Stilovi -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="css/satoshi.css" rel="stylesheet">
+    <!-- #endregion -->
+  </head>
+  
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html">GREEN INDUSTRY DOO</a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button class="nav-link btn" id="home-link" onclick="location.href='index.html'">Početna</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn" id="dozvole-link" onclick="location.href='dozvole.html'">Dozvole</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn" id="galerija-link" onclick="location.href='galerija.html'">Galerija</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn" id="onama-link" onclick="location.href='onama.html'">O nama</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn" id="kontakt-link" onclick="location.href='kontakt.html'">Kontakt</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Intro sekcija -->
+    <section class="intro-section container-fluid py-5" style="padding: 50px;">
+      <div class="row align-items-center">
+          <div class="col-lg-6 text-center text-lg-start">
+              <img src="assets/logo.svg" alt="Green Industry Logo" class="img-fluid mb-4" style="max-width: 300px;">
+              <p>Dobrodošli u Green Industry, lidera u održivim industrijskim rešenjima. Naša misija je da pružimo ekološki prihvatljive proizvode i usluge koje unapređuju kvalitet života i štite našu planetu.</p>
+          </div>
+          <div class="col-lg-6 text-center">
+              <img src="assets/fabrika.png" alt="Green Industry Illustration" class="img-fluid">
+          </div>
+        </div>
+    </section>
+
+    <!-- Usluge sekcija -->
+    <section class="usluge-section" style="padding-left: 10px; padding-right: 10px;">
+      <div class="container-fluid">
+        <h2 class="text-center mb-5">Usluge koje nudimo</h2>
+        <div class="row">
+          <!-- Prva kartica -->
+          <div class="col-md-4">
+            <div class="card usluge-card text-center">
+              <div class="card-body">
+                <i class="fa-solid fa-tree fa-3x mb-3 usluge-icon"></i>
+                <h5>Održavanje zelenih površina</h5>
+                <p>Nudimo profesionalne usluge održavanja zelenih površina, uključujući košenje trave, obrezivanje drveća i uređenje vrtova.</p>
+                <a href="kontakt.html" class="btn btn-primary mt-3">Kontaktiraj nas</a>
+              </div>
+            </div>
+          </div>
+          <!-- Druga kartica -->
+          <div class="col-md-4">
+            <div class="card usluge-card text-center">
+              <div class="card-body">
+                <i class="fa-solid fa-recycle fa-3x mb-3 usluge-icon"></i>
+                <h5>Reciklaža i upravljanje otpadom</h5>
+                <p>Pružamo usluge reciklaže i upravljanja otpadom kako bismo smanjili ekološki otisak i promovisali održivost.</p>
+                <a href="kontakt.html" class="btn btn-primary mt-3">Kontaktiraj nas</a>
+              </div>
+            </div>
+          </div>
+          <!-- Treća kartica -->
+          <div class="col-md-4">
+            <div class="card usluge-card text-center">
+              <div class="card-body">
+                <i class="fa-solid fa-truck fa-3x mb-3 usluge-icon"></i>
+                <h5>Transport i logistika</h5>
+                <p>Nudimo pouzdane usluge transporta i logistike za efikasno i sigurno premeštanje vaših proizvoda.</p>
+                <a href="kontakt.html" class="btn btn-primary mt-3">Kontaktiraj nas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper sekcija -->
+    <section class="custom-slider-section">
+      <div class="container-fluid px-0">
+        <div class="swiper customSwiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="custom-icon-box">
+                <img src="assets/korisnik.png" alt="Icon 1" class="custom-icon-img">
+                <h3 class="custom-slider-title">Firma 1</h3>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="custom-icon-box">
+                <img src="assets/korisnik.png" alt="Icon 2" class="custom-icon-img">
+                <h3 class="custom-slider-title">Firma 2</h3>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="custom-icon-box">
+                <img src="assets/korisnik.png" alt="Icon 3" class="custom-icon-img">
+                <h3 class="custom-slider-title">Firma 3</h3>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="custom-icon-box">
+                <img src="assets/korisnik.png"  class="custom-icon-img">
+                <h3 class="custom-slider-title">Firma 4</h3>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+              <div class="custom-icon-box">
+                <img src="assets/korisnik.png"  class="custom-icon-img">
+                <h3 class="custom-slider-title">Firma 5</h3>
+              </div>
+            </div>
+            <!-- Slide 6-->
+            <div class="swiper-slide">
+              <div class="custom-icon-box">
+                <img src="assets/korisnik.png"  class="custom-icon-img">
+                <h3 class="custom-slider-title">Firma 6</h3>
+              </div>
+            </div>
+            <!-- Slide 7 -->
+            <div class="swiper-slide">
+              <div class="custom-icon-box">
+                <img src="assets/korisnik.png"  class="custom-icon-img">
+                <h3 class="custom-slider-title">Firma 7</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sastanak sekcija -->
+    <section class="container-fluid schedule-meeting" background-color="#bdb2c3">
+      <div class="row">
+        <!-- Text Section -->
+        <div class="col-md-6 p-4 d-flex align-items-center justify-content-center">
+          <div class="text-left p-md-4">
+            <h1>Zakažite sastanak!</h1>
+            <h4>
+              Sastanak sa našim stručnjacima je prvi korak ka održivom poslovanju. Kontaktirajte nas putem forme ispod i zakažite sastanak.
+            </h4>
+            <form class="meeting-form">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control rounded-input" placeholder="Unesi svoj email" required>
+              <button type="submit" class="btn mt-3">Pošalji zahtev</button>
+            </form>
+          </div>
+        </div>
+        <!-- Image Section -->
+        <div class="col-md-6 p-0">
+          <img src="assets/rukovanje.jpg" alt="Sastanak" class="img-fluid">
+        </div>
+      </div>
+    </section>
+  
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Prva kolona: Logo -->
+          <div class="col-md-4">
+            <img src="assets/logo.svg" alt="Green Industry" class="footer-logo">
+          </div>
+          <!-- Druga kolona: Brzi podaci o firmi -->
+          <div class="col-md-4">
+            <h5>Beograd, Ulica 123</h5>
+            <h5>Tel: <a href="tel:+38606767880">+38606767880</a></h5>
+            <h5>Email: <a href="mailto:email@green.rs">email@green.rs</a></h5>
+          </div>
+          <!-- Treća kolona: Linkovi -->
+          <div class="col-md-4">
+            <h5>Linkovi</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Početna</a></li>
+              <li><a href="dozvole.html">Dozvole</a></li>
+              <li><a href="galerija.html">Galerija</a></li>
+              <li><a href="onama.html">O nama</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="text-center">© Sva prava zadržana od strane Green Industry</p>
+        <hr>
+        <p class="text-center small">Izrada sajtova <a href="https://lazarkrstic.com" target="_blank">KRLEDESIGN</a></p>
+      </div>
+    </footer>
+
+
+  <!--#region Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- #endregion -->
+  </body>
+</html>

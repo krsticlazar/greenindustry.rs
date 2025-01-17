@@ -1,0 +1,561 @@
+/* #region Globalne promenljive */
+    @font-face {
+        font-family: 'Satoshi';
+        src: url('../fonts/Satoshi-Variable.woff2') format('woff2-variations'),
+            url('../fonts/Satoshi-Variable.woff2') format('woff2');
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+        /*Available axes: 'wght' (range from 300.0 to 900.0) */
+    }
+    :root {
+        --primary-color: white;
+        --secondary-color: #dddddd;
+        --accent-color: #c9e2aa;
+        --background-color: #749a4b;
+        --text-color: #21382d;
+        --highlight-color: black;
+    }
+
+    body {
+        font-family: 'Satoshi', sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+    }
+
+    h1 {
+        font-size: 2.5em;
+        font-weight: 900;
+        color: var(--text-color);
+    }
+
+    h2 {
+        font-size: 2em;
+        font-weight: 700;
+        color: var(--text-color);
+    }
+
+    h3 {
+        font-size: 1.75em;
+        font-weight: 500;
+        color: var(--text-color);
+    }
+
+    h4 {
+        font-size: 1.5em;
+        font-weight: 400;
+        color: var(--text-color);
+    }
+
+    h5 {
+        font-size: 1.5em;
+        font-weight: 400;
+        color: var(--text-color);
+        margin-top: 20px;
+    }
+
+    p, a {
+        font-size: 1.5em;
+        font-weight: 300;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    p, h4, h5 {
+        animation: fadeIn 4s forwards;
+        opacity: 0 ;
+    }
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+/* #endregion */
+
+/* #region Navbar */
+    .navbar {
+        background-color: var(--secondary-color);
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+        color: var(--text-color);
+        font-size: 2.3rem;
+        font-weight: 500;
+        text-decoration: none;
+        margin-right: auto;
+        margin-left: 17px;
+    }
+
+    .navbar-nav {
+        margin-left: auto; /* Pomera sve stavke osim navbar-brand uz desnu ivicu */
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 20px; /* Razmak između stavki */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--text-color);
+        padding: 10px 0;
+        transition: all 1s ease;
+    }
+
+    .navbar-nav .nav-link.active {
+        text-decoration: underline;
+        color: var(--background-color);
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: var(--background-color);
+    }
+
+    .navbar-nav .btn {
+        font-weight: 500;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-nav .btn:hover {
+        color: var(--background-color);
+        padding-right: 40px;
+        padding-left: 40px;
+        background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+        text-decoration: none;
+        text-decoration: none;
+        border-radius: 30px;
+    }
+
+    .navbar-nav .btn.active {
+        text-decoration: underline;
+        color: var(--highlight-color);
+    }
+
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease; /* Smanjena tranzicija za brži efekat */
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        content: '';
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+        display: block;
+        position: absolute;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-toggler-icon::before {
+        top: -10px;
+    }
+
+    .navbar-toggler-icon::after {
+        top: 10px;
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+        transform: rotate(45deg);
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+        transform: rotate(90deg);
+        top: 0;
+    }
+
+    @media screen and (max-width: 992px) {
+        .navbar-brand{
+            font-size: 1.5em;;
+        }
+    }
+/* #endregion */
+
+/* #region Intro */
+
+    .intro-section {
+        background: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
+        color: var(--text-color);
+    }
+
+    .intro-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .intro-section .col-lg-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+
+
+    @media (min-width: 992px) {
+        .intro-section .col-lg-6.text-lg-start {
+            align-items: flex-start;
+        }
+    }
+
+/* #endregion */
+
+/* #region Usluge */
+.usluge-section {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 60px 50px;
+}
+
+.usluge-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.usluge-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.usluge-card h5 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.usluge-card p {
+    font-size: 1.125em;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.usluge-card .btn {
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.usluge-card .btn:hover {
+    color: var(--background-color);
+    padding-right: 40px;
+    padding-left: 40px;
+    background: var(--secondary-color);
+    text-decoration: none;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.usluge-icon {
+    color: var(--text-color);
+}
+
+@media (min-width: 992px) {
+    .usluge-section{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+}
+
+/* #endregion */
+
+/* #region Slider */
+.custom-slider-section {
+    background-color: var(--text-color);
+    padding: 80px 0;
+    text-align: center;
+    height: auto;
+  }
+
+  .custom-icon-box {
+    color: #fff; /* Bela boja ikonica */
+  }
+
+  .custom-slider-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff; /* Bela boja teksta */
+  }
+
+  .custom-slider-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #ccc; /* Svetlija boja teksta */
+    margin-top: 5px;
+  }
+
+  .custom-icon-img {
+    width: 90px; /* Fiksna širina */
+    height: 90px; /* Fiksna visina */
+    color: #fff; /* Bela boja ikonica */
+    margin-bottom: 30px;
+  }
+
+  .customSwiper {
+    width: 100%;
+    padding: 0; /* Uklanjanje paddinga */
+    margin: 0; /* Uklanjanje margina */
+    align-items: center;
+  }
+
+  .customSwiper .swiper-wrapper {
+    width: 100%; /* Osiguranje da wrapper ide preko cele širine prozora */
+    height: auto; /* Visina se prilagođava sadržaju */
+  }
+
+  .customSwiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+
+/* #endregion*/
+
+/* #region Sastanak */
+.schedule-meeting {
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+}
+
+.schedule-meeting h1 {
+    font-weight: 900;
+    padding-bottom: 30px;
+    color: var(--text-color);
+}
+
+.schedule-meeting h3{
+    padding-bottom: 30px;
+}
+
+.schedule-meeting .form-label {
+    font-size: 1.125em;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.schedule-meeting .form-control {
+    border: 1px solid var(--text-color);
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-size: 1em;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+.schedule-meeting .btn {
+    font-size: 1.5em;
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.schedule-meeting .btn:hover {
+    color: var(--background-color);
+    padding-right: 40px;
+    padding-left: 40px;
+    background: var(--secondary-color);
+    text-decoration: none;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.schedule-meeting img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* #endregion */
+
+/* #region Galerija */
+
+    .row_galerija {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    
+    .column_galerija {
+        flex: 25%;
+        max-width: 33.3%;
+        padding: 0 4px;
+        position: relative;
+    }
+    
+    .column_galerija img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        filter: grayscale(1) brightness(0.5);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s linear;
+    }
+    
+    .column_galerija img:hover {
+        filter: grayscale(0);
+    }
+    
+    .column_galerija .image_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s linear;
+        border-radius: 5px;
+    }
+    
+    .column_galerija:hover .image_overlay {
+        opacity: 1;
+    }
+    
+    @media screen and (max-width: 800px) {
+        .column_galerija {
+        flex: 50%;
+        max-width: 50%;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .column_galerija {
+        flex: 100%;
+        max-width: 100%;
+        }
+    
+        .column_galerija img {
+        filter: grayscale(0) brightness(1);
+        }
+    }
+  
+/*#endregion */
+
+/* #region Onama */
+.onama-section {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 60px 0;
+}
+
+.onama-section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.onama-section p {
+    font-size: 1.25em;
+    font-weight: 300;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+/* #endregion */
+
+/* #region Footeri */
+    .footer {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        margin: 0;
+        border-top: 2px solid var(--text-color);
+        /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); */
+    }
+
+    .footer .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        max-width: 60%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .footer h5 {
+        font-size: 1.25em;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .footer p, .footer a {
+        font-size: 1em;
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        color: var(--highlight-color);
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 5px;
+    }
+
+    .footer-links a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    .footer-links a:hover {
+        color: var(--highlight-color);
+    }
+
+    .footer hr {
+        border: 0;
+        border-top: 1px solid var(--text-color);
+    }
+
+    .footer .text-center {
+        text-align: center;
+    }
+
+    .footer .small {
+        font-size: 0.875em;
+    }
+
+/* #endregion  */
